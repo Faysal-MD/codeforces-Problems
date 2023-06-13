@@ -15,15 +15,15 @@ void solve() {
     set <int> s;
     while(n != 0) {
         digit = n % 10;
-        if (digit == 0) {
-            s.insert(digit);
-        }
+        s.insert(digit);
         len++;
         digit =  digit * pow(10, len);
+        if (digit == 0) break;
         n /= 10;
+        cout << digit << " ";
     }
-    cout << nl << s.size() << nl;
-    cout << digit << " " << nl;
+    // cout << nl << s.size() << nl;
+    // cout << digit << " " << nl;
 }
 
 int32_t main(){
